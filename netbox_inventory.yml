@@ -1,0 +1,20 @@
+plugin: netbox.netbox.nb_inventory #for 2.10
+token: "{{ netbox_token }}"
+# token: '{{ lookup("env", "netbox_token") }}'
+# token: abcd1234
+api_endpoint: https://netbox.service.dev
+validate_certs: false
+config_context: yes
+flatten_config_context: yes
+flatten_custom_fields: yes
+flatten_local_context_data: yes
+fetch_all: no
+group_by:
+  - device_roles
+  - tenants
+group_names_raw: True
+query_filters:
+  - tenant: pre-production
+  - status: active
+compose:
+  ansible_network_os: platform.napalm_driver
