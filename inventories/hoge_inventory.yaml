@@ -1,0 +1,13 @@
+---
+all:
+  children:
+    hoge_group_all:
+      hosts:
+        hoge[01:03].example.com:
+        hoge-lb01.example.com:
+    hoge:
+      hosts:
+        hoge[01:03].example.com:
+    hoge_lb:
+      hosts:
+        hoge-lb01.example.com:
