@@ -11,3 +11,5 @@ all:
     hoge_lb:
       hosts:
         hoge-lb01.example.com:
+          foo: 123
+          bar: "abcdef"
